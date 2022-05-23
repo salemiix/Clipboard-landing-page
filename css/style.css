@@ -1,0 +1,263 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+  }
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit;
+  }
+  :root {
+    --strongCyan: hsl(171, 66%, 44%);
+    --lightBlue: hsl(233, 100%, 69%);
+    --darkGrayishBlue: hsl(210, 10%, 33%);
+    --grayishBlue: hsl(201, 11%, 66%);
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+  }
+  
+  /* Start Container */
+  .container {
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Container*/
+  
+  img {
+    max-width: 100%;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  .center {
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    display: inline-block;
+    color: #fff;
+    background-color: #000;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    margin: 20px 5px;
+  }
+  @media (max-width: 768px) {
+    .btn {
+      width: 100%;
+    }
+  }
+  .btn-primary {
+    background-color: var(--strongCyan);
+    box-shadow: 0 4px hsl(171, 68%, 36%);
+  }
+  .btn-secondary {
+    background-color: var(--lightBlue);
+    box-shadow: 0 4px hsl(233, 71%, 61%);
+  }
+  .btn:hover {
+    opacity: 0.7;
+  }
+  p {
+    color: var(--grayishBlue);
+  }
+  .custom-h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  @media (max-width: 768px) {
+    .custom-h1 {
+      font-size: 30px;
+    }
+  }
+  
+  .custom-p {
+    font-size: 16px;
+    line-height: 1.8;
+    width: 55%;
+    margin: auto;
+    color: var(--grayishBlue);
+  }
+  @media (max-width: 768px) {
+    .custom-p {
+      width: 100%;
+    }
+  }
+  
+  .custom-heading {
+    padding: 50px;
+    text-align: center;
+    margin: auto;
+  }
+  /* End globals */
+
+/* Start header*/
+header {
+    background-image: url(../images/bg-header-desktop.png);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* End header*/ 
+
+  /* Start snippets */
+.snippets .flex {
+    margin-top: 70px;
+  }
+  .snippets .flex > div {
+    text-align: left;
+    flex: 1;
+  }
+  .snippets .flex img {
+    position: relative;
+    left: -145px;
+  }
+  @media (max-width: 768px) {
+    .snippets .flex > div {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .snippets .flex > div .content {
+      padding: 40px;
+    }
+    .snippets .flex {
+      flex-direction: column;
+    }
+    .snippets .flex img {
+      position: relative;
+      left: 0;
+    }
+  }
+  
+  /* End snippets */
+  
+  /* Start Clipboard */
+.clipboard img {
+    margin-top: 70px;
+  }
+  /* End Clipboard */
+
+  /* Start workflow */
+.workflow {
+    padding-top: 0;
+  }
+  .workflow .cards {
+    justify-content: space-between;
+  }
+  @media (max-width: 768px) {
+    .workflow .cards {
+      flex-direction: column;
+    }
+  }
+  .workflow .cards .card {
+    text-align: center;
+    padding: 50px;
+  }
+  /* End workflow */
+
+  /* Start companys */
+.companys {
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px auto;
+  }
+  @media (max-width: 768px) {
+    .companys {
+      flex-direction: column;
+    }
+    .companys img {
+      margin: 40px auto;
+    }
+  }
+  /* End companys */
+
+  /*Start footer */
+footer {
+    background-color: hsla(202, 11%, 66%, 0.205);
+    padding: 50px 0;
+  }
+  footer .flex > ul {
+    flex: 1;
+  }
+  
+  footer .flex {
+    align-items: center;
+  }
+  footer .flex img {
+    margin-right: 40px;
+  }
+  footer .flex ul li {
+    margin-bottom: 15px;
+  }
+  
+
+  footer .flex ul li a {
+    color: var(--darkGrayishBlue);
+  }
+
+  footer .flex ul li a:hover{
+    color: var(--strongCyan);
+    }
+
+  footer ul.social-media {
+    justify-content: space-evenly;
+  }
+  footer svg path:hover{
+    fill: var(--strongCyan);
+    }
+
+  @media (max-width: 768px) {
+    footer .flex {
+      flex-direction: column;
+    }
+    footer .flex img {
+      margin-right: 0;
+    }
+    footer .flex > ul {
+      text-align: center;
+      flex: auto;
+    }
+    footer ul.social-media {
+      flex-direction: row;
+    }
+    footer ul.social-media li {
+      margin: 10px;
+    }
+  }
+  /* End footer */
+
+
